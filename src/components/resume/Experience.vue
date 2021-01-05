@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: 'Resume',
+  name: 'Experience',
 };
 </script>
 

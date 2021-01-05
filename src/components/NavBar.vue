@@ -6,8 +6,8 @@
         :key="page.id"
       >
         <a
-        v-bind:class="{ active: page.id === activePageId }"
-          >{{page.name}}</a>
+          v-bind:class="{ active: page.id === activePageId }"
+            >{{page.name}}</a>
       </li>
     </ul>
   </nav>
