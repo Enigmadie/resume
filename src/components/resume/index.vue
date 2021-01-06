@@ -22,9 +22,11 @@ export default {
 </script>
 
 <style scoped>
-  .resume {
+.resume {
     height: 100%;
     width: 100%;
     background-color: #F6F6F8;
+    display: flex;
+    justify-content: center;
   }
 </style>

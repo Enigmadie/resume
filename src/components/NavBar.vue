@@ -32,7 +32,7 @@ export default {
 <style scoped>
   nav {
     height: 100%;
-    width: 25vw;
+    width: 20vw;
     background-color: #33333C;
   }
   ul {
@@ -44,9 +44,9 @@ export default {
     line-height: 30px;
     font-weight: 500;
     color: #A6A8AF;
-    list-style-type: none;
     margin-bottom: 25px;
     cursor: pointer;
+    text-align: center;
   }
   a {
     padding: 3px;

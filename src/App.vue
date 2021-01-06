@@ -26,4 +26,8 @@ export default {
     display: flex;
     height: 100%;
 }
+* {
+  list-style-type: none;
+  text-align: left;
+}
 </style>
