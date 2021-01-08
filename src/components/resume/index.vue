@@ -1,17 +1,20 @@
 <template>
   <div class="resume">
     <About v-bind:aboutData="aboutData" />
+    <Experience />
   </div>
 </template>
 
 <script>
 import aboutData from '@/mocks/bio-mock';
 import About from '@/components/resume/About.vue';
+import Experience from '@/components/resume/Experience.vue';
 
 export default {
   name: 'Resume',
   components: {
     About,
+    Experience,
   },
   data() {
     return {
@@ -23,10 +26,10 @@ export default {
 
 <style scoped>
 .resume {
-    height: 100%;
-    width: 100%;
-    background-color: #F6F6F8;
-    display: flex;
-    justify-content: center;
-  }
+  height: 100%;
+  width: 100%;
+  background-color: #F6F6F8;
+  display: flex;
+  justify-content: center;
+}
 </style>

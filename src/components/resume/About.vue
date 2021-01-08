@@ -92,10 +92,10 @@ export default {
 .main-data {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 .bio {
-    padding: 40px 0;
+    padding: 50px 0;
     border-top: 1px solid #d0cfd4;
     border-bottom: 1px solid #d0cfd4;
 }
@@ -163,10 +163,10 @@ h4 {
     align-self: flex-start;
 }
 .education-wrapper {
-    margin-right: 185px;
+    margin-right: 300px;
 }
 .tech {
-  letter-spacing: 1.2px;
-  line-height: 22px;
+  letter-spacing: 1px;
+  line-height: 20px;
 }
 </style>

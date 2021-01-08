@@ -21,7 +21,6 @@ export default {
       pages: [
         { id: 1, name: 'Я' },
         { id: 2, name: 'Портфолио' },
-        { id: 3, name: 'Контакты' },
       ],
       activePageId: 1,
     };
