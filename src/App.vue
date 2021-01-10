@@ -24,7 +24,6 @@ export default {
     text-align: center;
     color: #2c3e50;
     display: flex;
-    height: 100%;
 }
 * {
   list-style-type: none;

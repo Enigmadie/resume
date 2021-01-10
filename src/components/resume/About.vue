@@ -166,7 +166,7 @@ h4 {
     margin-right: 300px;
 }
 .tech {
-  letter-spacing: 1px;
-  line-height: 20px;
+    letter-spacing: 1px;
+    line-height: 20px;
 }
 </style>

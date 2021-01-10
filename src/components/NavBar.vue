@@ -30,13 +30,15 @@ export default {
 
 <style scoped>
   nav {
-    height: 100%;
-    width: 20vw;
+    position: relative;
+    min-height: 100%;
+    width: 25%;
     background-color: #33333C;
   }
   ul {
-    position: relative;
-    top: 40%;
+    position: fixed;
+    top: 20%;
+    left: 6%;
   }
   li {
     font-size: 23px;
