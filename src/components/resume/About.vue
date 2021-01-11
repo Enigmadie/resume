@@ -85,9 +85,11 @@ export default {
 
 <style scoped>
 .about {
-    padding: 60px 40px;
+    align-self: center;
+    height: 100%;
     background-color: #F6F6F8;
     max-width: 1500px;
+    margin-bottom: 30vh;
 }
 .main-data {
     display: flex;
@@ -156,6 +158,7 @@ h4 {
     display: flex;
 }
 .skills {
+    width: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -163,7 +166,7 @@ h4 {
     align-self: flex-start;
 }
 .education-wrapper {
-    margin-right: 300px;
+     margin-right: 8vw;
 }
 .tech {
     letter-spacing: 1px;
