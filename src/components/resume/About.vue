@@ -89,7 +89,7 @@ export default {
     height: 100%;
     background-color: #F6F6F8;
     max-width: 1500px;
-    margin-bottom: 30vh;
+    margin-bottom: 20vh;
 }
 .main-data {
     display: flex;

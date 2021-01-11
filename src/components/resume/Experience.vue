@@ -19,8 +19,14 @@
         :key="projUnit.organization"
       >
         <h4>{{projUnit.name}}</h4>
-        <p>{{projUnit.git}}</p>
-        <p>{{projUnit.source}}</p>
+        <div>
+          <a :href="projUnit.git" target="_blank">
+            <img src="https://img.icons8.com/windows/64/000000/github.png"/>
+          </a>
+          <a :href="projUnit.source" target="_blank">
+            <img src="https://img.icons8.com/windows/64/000000/domain.png"/>
+          </a>
+        </div>
         <p>{{projUnit.description}}</p>
         <div class="tools">
           <div
@@ -61,18 +67,20 @@ h2 {
     border-left: 8px solid #44b283;
     font-size: 30px;
     padding-left: 7px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     text-transform: uppercase;
     margin-left: -15px;
 }
 ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 92px;
+    justify-content: flex-left;
+    margin-bottom: 87px;
 }
 li {
     width: 340px;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 .work-data-wrapper li p:nth-child(2) {
     color: grey;
@@ -86,22 +94,37 @@ li {
     font-size: 14.5px;
 }
 h4 {
-    font-size: 17px;
-    margin-bottom: 9px;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+.project-data-wrapper li div:nth-child(2) {
+    display: flex;
+}
+.project-data-wrapper img {
+    height: 32px;
+    width: 32px;
+}
+.project-data-wrapper p {
+    min-height: 88px;
 }
 .tools {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 13px;
-    margin-bottom: 25px;
+    margin-top: 11px;
+    margin-bottom: 22px;
 }
 .tools div {
     font-size: 14.8px;
-    padding: 0.8px 2.8px;
+    padding: 0.8px 3.5px;
     margin-right: 6px;
     margin-bottom: 6px;
-    border: 2px solid grey;
+    border: 1.5px solid #d0cfd4;
     border-radius: 9px;
     background-color: #E8E7E7;
+}
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
 }
 </style>
