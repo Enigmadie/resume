@@ -1,5 +1,5 @@
 <template>
-  <div v-if="expData" class="exp">
+  <div ref="exp" v-if="expData" class="exp">
     <h2>Опыт работы</h2>
     <ul class="work-data-wrapper">
       <li
@@ -60,7 +60,7 @@ export default {
     flex-direction: column;
     max-width: 1500px;
     height: 100%;
-    padding-left: 37px;
+    padding: 20px 0 40px 37px;
 }
 h2 {
     color: #44b283;

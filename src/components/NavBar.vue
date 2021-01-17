@@ -4,6 +4,7 @@
       <li
         v-for="page in pages"
         :key="page.id"
+        @click="scrollToElement(page.element, page.id)"
       >
         <a
           v-bind:class="{ active: page.id === activePageId }"
@@ -19,11 +20,32 @@ export default {
   data() {
     return {
       pages: [
-        { id: 1, name: 'Я' },
-        { id: 2, name: 'Портфолио' },
+        { id: 1, name: 'Я', element: 'about' },
+        { id: 2, name: 'Портфолио', element: 'exp' },
       ],
       activePageId: 1,
     };
+  },
+  methods: {
+    scrollToElement(elClass, elId) {
+      const el = this.$el.parentElement.getElementsByClassName(elClass)[0];
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        this.activePageId = elId;
+      }
+    },
+    setScrollPoint() {
+      const x = window.innerWidth / 2;
+      const y = window.innerHeight / 2;
+      const element = document.elementFromPoint(x, y);
+      const currentScreenElement = this.pages.filter((el) => el.element === element.className);
+      if (currentScreenElement.length > 0) {
+        this.activePageId = currentScreenElement[0].id;
+      }
+    },
+  },
+  created() {
+    window.addEventListener('scroll', this.setScrollPoint);
   },
 };
 </script>
@@ -46,7 +68,7 @@ export default {
     font-weight: 500;
     color: #A6A8AF;
     margin-bottom: 25px;
-    cursor: pointer;
+   cursor: pointer;
     text-align: center;
   }
   a {

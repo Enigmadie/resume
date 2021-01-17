@@ -86,10 +86,10 @@ export default {
 <style scoped>
 .about {
     align-self: center;
-    height: 100%;
+    height: 100vh;
     background-color: #F6F6F8;
     max-width: 1500px;
-    margin-bottom: 20vh;
+    padding-top: 60px;
 }
 .main-data {
     display: flex;
