@@ -25,9 +25,16 @@ export default {
     color: #2c3e50;
     display: flex;
     height: 100%;
+    background-color: #F6F6F8;
 }
 * {
-  list-style-type: none;
-  text-align: left;
+    list-style-type: none;
+    text-align: left;
+    box-sizing: content-box;
+}
+@media screen and (max-width: 1000px) {
+    #app {
+        flex-direction: column;
+    }
 }
 </style>

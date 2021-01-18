@@ -158,7 +158,7 @@ h4 {
     display: flex;
 }
 .skills {
-    width: 500px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -166,10 +166,49 @@ h4 {
     align-self: flex-start;
 }
 .education-wrapper {
-     margin-right: 8vw;
+    margin-right: 8vw;
 }
 .tech {
     letter-spacing: 1px;
     line-height: 20px;
+}
+@media screen and (max-width: 1180px) {
+    .main-data {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .grade {
+        margin-bottom: 40px;
+    }
+    .main-data ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-data li {
+        padding-right: 15px;
+        margin-bottom: 15px;
+        white-space: nowrap;
+    }
+    .bio {
+        padding: 30px 0;
+    }
+    .other-data {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills {
+        margin-bottom: 45px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .about {
+        margin-top: 80px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .about {
+      height: 100%;
+      margin-bottom: 40px;
+    }
 }
 </style>

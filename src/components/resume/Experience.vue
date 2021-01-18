@@ -1,5 +1,6 @@
 <template>
   <div ref="exp" v-if="expData" class="exp">
+    <div>
     <h2>Опыт работы</h2>
     <ul class="work-data-wrapper">
       <li
@@ -12,6 +13,8 @@
         <p>{{workUnit.description}}</p>
       </li>
     </ul>
+    </div>
+    <div>
     <h2>Проекты</h2>
     <ul class="project-data-wrapper">
       <li
@@ -37,6 +40,7 @@
         </div>
       </li>
     </ul>
+    </div>
   </div>
 </template>
 
@@ -60,7 +64,10 @@ export default {
     flex-direction: column;
     max-width: 1500px;
     height: 100%;
-    padding: 20px 0 40px 37px;
+    padding: 20px 0 40px 0;
+}
+.exp > div {
+    padding-left: 37px;
 }
 h2 {
     color: #44b283;
@@ -75,12 +82,13 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-left;
-    margin-bottom: 87px;
+    margin-bottom: 57px;
 }
 li {
-    width: 340px;
+    max-width: 340px;
+    width: 100%;
     margin-right: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 .work-data-wrapper li p:nth-child(2) {
     color: grey;
@@ -111,7 +119,6 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     margin-top: 11px;
-    margin-bottom: 22px;
 }
 .tools div {
     font-size: 14.8px;
@@ -126,5 +133,22 @@ a {
     display: block;
     color: inherit;
     text-decoration: none;
+}
+@media screen and (max-width: 1000px) {
+    .exp {
+        align-items: center;
+    }
+    .exp > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    ul {
+
+        justify-content: center;
+    }
+    .project-data-wrapper p {
+        min-height: inherit;
+    }
 }
 </style>

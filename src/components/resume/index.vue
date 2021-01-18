@@ -28,12 +28,17 @@ export default {
 
 <style scoped>
 .resume {
-  height: 100%;
-  width: 100%;
-  background-color: #F6F6F8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 40px;
+    height: 100%;
+    width: 100%;
+    background-color: #F6F6F8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 40px;
+}
+@media screen and (max-width: 1000px) {
+    .resume {
+        width: auto;
+    }
 }
 </style>

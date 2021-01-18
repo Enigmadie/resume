@@ -38,9 +38,11 @@ export default {
       const x = window.innerWidth / 2;
       const y = window.innerHeight / 2;
       const element = document.elementFromPoint(x, y);
-      const currentScreenElement = this.pages.filter((el) => el.element === element.className);
-      if (currentScreenElement.length > 0) {
-        this.activePageId = currentScreenElement[0].id;
+      if (element.closest('.exp')) {
+        this.activePageId = 2;
+      }
+      if (element.closest('.about')) {
+        this.activePageId = 1;
       }
     },
   },
@@ -51,36 +53,56 @@ export default {
 </script>
 
 <style scoped>
-  nav {
+nav {
     position: relative;
     min-height: 100%;
-    width: 25%;
+    width: 20%;
     background-color: #33333C;
-  }
-  ul {
-    position: fixed;
+    padding: 0 20px;
+}
+ul {
+    position: sticky;
     top: 20%;
-    left: 6%;
-  }
-  li {
+    left: 10%;
+}
+li {
     font-size: 23px;
     line-height: 30px;
     font-weight: 500;
     color: #A6A8AF;
     margin-bottom: 25px;
-   cursor: pointer;
+    cursor: pointer;
     text-align: center;
-  }
-  a {
+}
+a {
     padding: 3px;
-  }
-  a:hover {
+}
+a:hover {
     border-bottom: 2px solid #A6A8AF;
-  }
-  .active {
+}
+.active {
     color: #F5F6F9;
-  }
-  .active:hover {
+}
+.active:hover {
     border-bottom: 2px solid #F5F6F9;
-  }
+}
+@media screen and (max-width: 1000px) {
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        min-height: inherit;
+        padding: 0;
+    }
+    ul {
+        position: static;
+        display: flex;
+        margin-top: 25px;
+    }
+    li:nth-child(1) {
+        margin-right: 45px;
+    }
+}
 </style>
