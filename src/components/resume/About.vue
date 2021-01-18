@@ -171,6 +171,7 @@ h4 {
 .tech {
     letter-spacing: 1px;
     line-height: 20px;
+    overflow-wrap: anywhere;
 }
 @media screen and (max-width: 1180px) {
     .main-data {
